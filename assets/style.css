@@ -1,9 +1,17 @@
+/*
+ * @media added toward the end to overwrite
+*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: #777;
     background-color: blanchedalmond;
 }
+
+/*
+ * general
+*/
 
 h1,
 h2,
@@ -35,12 +43,13 @@ p:last-child {
 /* 
  * header
 */
+
 nav {
     float: right;
     margin-top: 25px;
 }
 
-mav a {
+nav a {
     display: inline-block;
     padding-left: 15px;
     margin-left: 15px;
@@ -54,10 +63,6 @@ nav a:first-child {
     border-left: 0 none;
 }
 
-textarea {
-    height: 200px;
-}
-
 nav a :first-child {
     border-left: 0 none;
 }
@@ -69,7 +74,7 @@ nav a :first-child {
 
 #logo {
     float: left;
-    width: 250px;
+    width: 300px;
     height: 90px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
@@ -79,10 +84,6 @@ nav a :first-child {
     text-align: center;
     text-decoration: none;
     background: #4aaa4a;
-}
-
-.mt-0 {
-    margin-top: 0 !important;
 }
 
 #masthead {
@@ -121,6 +122,128 @@ main
     margin: 0 auto;
     clear: both;
 }
+
+/*
+ * portfolio
+*/
+
+.work {
+    position: relative;
+    float: left;
+    width: 274px;
+    height: 202px;
+    overflow: auto;
+}
+
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+.work img {
+    width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+}
+
+.work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaa4a;
+    border-bottom: 0;
+}
+
+/* 
+ * contact
+*/
+
+#contact-form ul {
+    margin-bottom: 20px;
+}
+
+#contact-form li {
+    margin-bottom: 10px;
+}
+
+label,
+input[type=text],
+input[type=email],
+textarea {
+    display: block;
+    width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 200px;
+}
+
+input[type=submit] {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background: #4aaaa5;
+    border: 0 none;
+}
+
+/*
+ * @media
+*/
+
+@media screen and (max-width: 980px) {
+    .main-img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-img {
+        width: 100%;
+    }
+    .work {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        text-align: center;
+    }
+
+    #logo {
+        width: 100%;
+        height: 100px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+}
+
+/*
+ * footer
+*/
 
 footer {
     padding: 30px;
